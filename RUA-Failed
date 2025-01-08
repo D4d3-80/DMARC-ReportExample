@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<feedback>
+  <report_metadata>
+    <org_name>recipientdomain.org</org_name>
+    <email>postmaster@recipientdomain.org</email>
+    <report_id>9876543</report_id>
+    <date_range>
+      <begin>1704686400</begin> <!-- Data in formato Unix timestamp -->
+      <end>1704772800</end>
+    </date_range>
+  </report_metadata>
+  <policy_published>
+    <domain>legitimatesender.com</domain>
+    <adkim>s</adkim> <!-- Allineamento DKIM rigoroso -->
+    <aspf>s</aspf> <!-- Allineamento SPF rigoroso -->
+    <p>reject</p> <!-- Politica DMARC per il dominio -->
+    <sp>reject</sp> <!-- Politica per i sottodomini -->
+    <pct>100</pct> <!-- Percentuale di applicazione della politica -->
+  </policy_published>
+  <record>
+    <row>
+      <source_ip>198.51.100.30</source_ip>
+      <count>1</count>
+      <policy_evaluated>
+        <disposition>reject</disposition> <!-- Politica applicata -->
+        <dkim>fail</dkim> <!-- Stato della firma DKIM -->
+        <spf>pass</spf> <!-- Stato di validazione SPF -->
+      </policy_evaluated>
+    </row>
+    <identifiers>
+      <header_from>legitimatesender.com</header_from>
+    </identifiers>
+    <auth_results>
+      <dkim>
+        <domain>thirdparty.com</domain> <!-- Dominio non allineato -->
+        <result>fail</result>
+      </dkim>
+      <spf>
+        <domain>thirdparty.com</domain> <!-- Dominio non allineato -->
+        <result>pass</result>
+      </spf>
+    </auth_results>
+  </record>
+</feedback>
