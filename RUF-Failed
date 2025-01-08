@@ -1,0 +1,19 @@
+Feedback-Type: auth-failure
+User-Agent: dmarc-report-generator
+Version: 1.0
+Report-ID: forensic-12345
+Original-Mail-From: service@thirdparty.com
+Original-Rcpt-To: user@recipientdomain.org
+Arrival-Date: Wed, 08 Jan 2025 10:45:00 +0000
+Source-IP: 198.51.100.30
+Authentication-Results: recipientdomain.org; dkim=fail reason="signature verification failed"; spf=pass (sender IP is 198.51.100.30)
+Message-Id: <abcd5678@thirdparty.com>
+Subject: Your Monthly Invoice
+
+--Original Email Headers--
+Return-Path: <service@thirdparty.com>
+Received: from mail.thirdparty.com (198.51.100.30) by recipientdomain.org
+Date: Wed, 08 Jan 2025 10:40:00 +0000
+From: billing@legitimatesender.com
+To: user@recipientdomain.org
+Subject: Your Monthly Invoice
