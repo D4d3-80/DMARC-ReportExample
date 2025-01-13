@@ -15,7 +15,6 @@
     <aspf>s</aspf> <!-- Allineamento SPF rigoroso -->
     <p>reject</p> <!-- Politica DMARC per il dominio -->
     <sp>reject</sp> <!-- Politica per i sottodomini -->
-    <pct>100</pct> <!-- Percentuale di applicazione della politica -->
   </policy_published>
   <record>
     <row>
